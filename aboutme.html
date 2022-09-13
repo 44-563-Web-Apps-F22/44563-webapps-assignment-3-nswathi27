@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <p>I like travelling to various places and exploring their food and cultures.
         And also a computer science enthusiast with a good foundation in programming logic.
@@ -13,10 +15,10 @@
     </p>
     <h3>My Favourite Movie is Goodachari</h3>
     <p>
-        Goodachari is a well made spy thriller. 
-        The movie will definitely make the audience keep guessing what will happen next. 
+        Goodachari is a well made spy thriller.
+        The movie will definitely make the audience keep guessing what will happen next.
         And the movie is packed with enough twists and turns that really surprised me.
-        The movie deals with a young boy who want to be a Spy like his father. 
+        The movie deals with a young boy who want to be a Spy like his father.
         His father has died during a shootout. It is the basic plot of the movie.
     </p>
     <img src="./goodachari.jpg" alt="Goodachari">
@@ -50,5 +52,25 @@
             <td>3 days</td>
         </tr>
     </table>
+    <hr>
+    <h3>Code Display :</h3>
+    <blockquote
+        cite="https://stackoverflow.com/questions/73696877/how-to-get-all-categories-and-sub-categories-of-woocommerce-products-from-curren">
+        How to get all categories and sub-categories of woocommerce products from current wp_query loop</blockquote>
+    <pre>
+        <h3>All Post Meta</h3>
+        <?php 
+        $getPostCustom = get_post_custom(); 
+            foreach($getPostCustom as $name=>$value) {
+                echo "<strong>" . $name . "</strong>"."  =>  ";
+                foreach ($value as $nameAr=>$valueAr) {
+                        echo "<br />";
+                        echo $nameAr."  =>  ";
+                        echo var_dump($valueAr);
+                }
+                echo "<br /><br />";
+            }
+        ?></pre>
 </body>
+
 </html>
